@@ -1,9 +1,90 @@
-# Fcae-Detection-processing
-Dataset used: Kaggle Selfie Dataset
-Link: https://www.kaggle.com/datasets/axondata/selfie-and-official-id-photo-dataset-18k-images
+# AI-Powered KYC System – Face Verification Module
 
-Note: Dataset not uploaded due to size limitation.
-Please download from Kaggle and place inside /data folder.
+## Project Overview
+This repository contains the Face Verification module of the AI-Powered Identity Verification & Fraud Detection system for KYC compliance.
 
-Dataset Drive Link:
-https://drive.google.com/drive/folders/1d4Dz5NV_sCMv6-AIwkhld-h7EWNnDeBK?usp=drive_link
+The goal of this module is to verify whether a live selfie matches the official ID photo using deep learning-based facial embeddings.
+
+---
+
+## Contribution
+
+• Designed complete preprocessing pipeline  
+• Implemented face detection using MTCNN (with Haar fallback)  
+• Implemented face cropping and alignment  
+• Applied normalization and contrast enhancement  
+• Added training data augmentation  
+• Structured train / validation / test splits  
+• Integrated FaceNet for embedding generation  
+• Implemented cosine similarity-based verification  
+• Evaluated model using accuracy and confusion matrix  
+
+---
+
+## Pipeline Overview
+
+1. Dataset scanning and pairing
+2. Train/Validation/Test split
+3. Face detection
+4. Face cropping
+5. Face alignment
+6. Normalization (224x224, float32 [0,1])
+7. Data augmentation (train only)
+8. FaceNet embedding extraction (512-d)
+9. Cosine similarity matching
+10. Threshold-based verification
+
+---
+
+## Model Details
+
+Embedding Model: FaceNet  
+Embedding Size: 512  
+Similarity Metric: Cosine Similarity  
+Decision Rule: Similarity > Threshold → Match  
+
+---
+
+## Evaluation Metrics
+
+• Accuracy  
+• Confusion Matrix  
+• Preprocessing success rate  
+
+---
+
+## Output Structure
+
+Processed images saved as `.npy` files:
+train/
+val/
+test/
+
+Metadata saved as CSV files.
+
+---
+
+## Future Improvements
+
+• Larger dataset evaluation  
+• Threshold optimization  
+• ROC curve analysis  
+• Liveness detection integration  
+• Bias and fairness evaluation  
+
+---
+
+## Team Project Context
+
+This module is part of the larger AI-powered KYC system which also includes:
+
+• Document verification  
+• OCR  
+• Tampering detection  
+• Fraud risk scoring  
+• Human-in-the-loop validation  
+
+---
+
+Author: Deeksha H L  
+Role: Face Verification & Preprocessing
