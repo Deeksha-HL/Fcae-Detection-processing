@@ -35,6 +35,14 @@ The goal of this module is to verify whether a live selfie matches the official 
 10. Threshold-based verification
 
 ---
+## Flow Of Preprocessing
+
+
+
+
+
+
+
 
 ## Model Details
 
